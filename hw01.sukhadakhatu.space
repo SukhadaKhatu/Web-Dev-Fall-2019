@@ -1,0 +1,16 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/sukhada/www/hw01.sukhadakhatu.space;
+
+        index screenfetch.html;
+
+        server_name hw01.sukhadakhatu.space;
+
+        location / {
+                # First attempt to server request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}
